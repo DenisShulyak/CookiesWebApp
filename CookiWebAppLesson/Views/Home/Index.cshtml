@@ -1,0 +1,16 @@
+﻿@using System.Security.Claims;
+@using System.Threading;
+@{
+    ViewData["Title"] = "Home Page";
+          var email = User.Claims.ToList()[0].Value;
+}
+
+<div class="text-center">
+    <h1 class="display-4">
+        Welcome @email
+    </h1>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="SignOut">SignOut</a>
+    </li>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
